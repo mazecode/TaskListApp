@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Class JsonResponse
  *
- * @author Diego Feliú <dfeliu@siga98.net> @DFELIU
+ * @author Diego Feliú <diego.feliud@gmail.com> @DFELIU
  */
 @Getter
 @Setter

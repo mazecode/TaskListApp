@@ -9,45 +9,32 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Objects;
 
-
-/**
- * Class Task
- *
- * @author Diego Feliú <diego.feliud@gmail.com> @DFELIU
- */
+@Table(name = "users")
 @Entity
+@ToString
 @RequiredArgsConstructor
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
-@ToString
-@Table(name = "tasks")
-public class Task implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+@AllArgsConstructor
+@NoArgsConstructor
+public class User {
     @Id
-    @Column(name = "id", updatable = false, nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @ApiModelProperty(notes = "Task ID", name = "id", required = true, value = "1L", dataType = "Long")
+    @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(nullable = false)
-    @ApiModelProperty(notes = "Task Title", name = "title", required = true, value = "First Task Title")
-    private String title;
+    @Column
+    private String username;
 
-    @Column(nullable = false)
-    @ApiModelProperty(notes = "Task Description", name = "description", required = true, value = "This is an example of task description")
-    private String description;
+    @Column
+    private String email;
 
-    @Column(nullable = false)
-    @ApiModelProperty(notes = "Task State", name = "state", required = true, value = "PENDING")
-    private TaskState state;
+    @Column
+    private String password;
 
     @CreationTimestamp
     @DateTimeFormat
@@ -67,13 +54,13 @@ public class Task implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Task task = (Task) o;
+        User user = (User) o;
 
-        return Objects.equals(id, task.id);
+        return Objects.equals(id, user.id);
     }
 
     @Override
     public int hashCode() {
-        return 1976597858;
+        return 562048007;
     }
 }

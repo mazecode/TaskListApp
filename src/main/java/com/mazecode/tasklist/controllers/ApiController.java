@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Class ApiController
  *
- * @author Diego Feliú <dfeliu@siga98.net> @DFELIU
+ * @author Diego Feliú <diego.feliud@gmail.com> @DFELIU
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1")
 public class ApiController {
 	@Autowired
 	private JsonResponse response;

@@ -8,7 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 /**
  * Class SecurityConfig
  *
- * @author Diego Feliú <dfeliu@siga98.net> @DFELIU
+ * @author Diego Feliú <diego.feliud@gmail.com> @DFELIU
  */
 @Configuration
 @EnableWebSecurity

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Diego Feliú <dfeliu@siga98.net> @DFELIU
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/")
 public class HomeController extends ApiController {
 
 	@GetMapping()
